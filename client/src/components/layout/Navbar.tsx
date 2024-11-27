@@ -26,6 +26,9 @@ export default function Navbar() {
                 <a href="#services" className="hover:text-primary">Services</a>
               </li>
               <li>
+                <a href="https://blog.smartclinicsystems.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Blog</a>
+              </li>
+              <li>
                 <a href="#contact" className="hover:text-primary">Contact</a>
               </li>
             </ul>
