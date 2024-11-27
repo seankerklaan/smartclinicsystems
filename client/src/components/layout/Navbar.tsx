@@ -15,7 +15,7 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/">
           <div className="flex items-center space-x-2 cursor-pointer">
-            <img src="/smart-clinic-systems-logo.png" alt="Logo" className="h-10 w-10" />
+            <img src="/images/smart-clinic-systems-logo.png" alt="Smart Clinic Systems Logo" className="h-10 w-10" />
             <span className="font-semibold text-xl">Smart Clinic Systems</span>
           </div>
         </Link>

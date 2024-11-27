@@ -43,8 +43,8 @@ export default function Hero() {
           </div>
           <div className="hidden lg:block">
             <img
-              src="/healthcare-professional.svg"
-              alt="Healthcare Professional"
+              src="/images/healthcare-professional.svg"
+              alt="Healthcare Professional Consulting with Patient"
               className="w-full max-w-lg mx-auto"
             />
           </div>

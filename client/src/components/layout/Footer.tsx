@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
-            <img src="/smart-clinic-systems-logo.png" alt="Logo" className="h-12 w-12 mb-4" />
+            <img src="/images/smart-clinic-systems-logo.png" alt="Smart Clinic Systems Logo" className="h-12 w-12 mb-4" />
             <p className="mb-4">
               Expert consulting for modern healthcare practices. Transform your practice with smart tools & expert guidance.
             </p>
