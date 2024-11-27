@@ -1,0 +1,161 @@
+10:59:22 PM: build-image version: 9bcf56cf2fb4be798d49694f07e4bfb2dece7f7f (focal)
+10:59:22 PM: buildbot version: 9bcf56cf2fb4be798d49694f07e4bfb2dece7f7f
+10:59:22 PM: Building without cache
+10:59:23 PM: Starting to prepare the repo for build
+10:59:23 PM: No cached dependencies found. Cloning fresh repo
+10:59:23 PM: git clone --filter=blob:none https://github.com/seankerklaan/smartclinicsystems
+10:59:23 PM: Preparing Git Reference refs/heads/main
+10:59:25 PM: Starting to install dependencies
+10:59:26 PM: mise python@3.8.20   installing
+10:59:26 PM: mise python@3.8.20   downloading cpython-3.8.20+20241002-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz
+10:59:26 PM: mise python@3.8.20   installing cpython-3.8.20+20241002-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz
+10:59:26 PM: mise python@3.8.20   python --version
+10:59:26 PM: mise python@3.8.20   Python 3.8.20
+10:59:26 PM: mise python@3.8.20 ✓ installed
+10:59:26 PM: Python version set to 3.8
+10:59:27 PM: Collecting pipenv
+10:59:27 PM:   Downloading pipenv-2024.4.0-py3-none-any.whl.metadata (19 kB)
+10:59:27 PM: Collecting certifi (from pipenv)
+10:59:27 PM:   Downloading certifi-2024.8.30-py3-none-any.whl.metadata (2.2 kB)
+10:59:27 PM: Collecting packaging>=22 (from pipenv)
+10:59:27 PM:   Downloading packaging-24.2-py3-none-any.whl.metadata (3.2 kB)
+10:59:27 PM: Requirement already satisfied: setuptools>=67 in /opt/buildhome/.local/share/mise/installs/python/3.8.20/lib/python3.8/site-packages (from pipenv) (70.3.0)
+10:59:27 PM: Collecting virtualenv>=20.24.2 (from pipenv)
+10:59:27 PM:   Downloading virtualenv-20.28.0-py3-none-any.whl.metadata (4.4 kB)
+10:59:27 PM: Collecting distlib<1,>=0.3.7 (from virtualenv>=20.24.2->pipenv)
+10:59:27 PM:   Downloading distlib-0.3.9-py2.py3-none-any.whl.metadata (5.2 kB)
+10:59:27 PM: Collecting filelock<4,>=3.12.2 (from virtualenv>=20.24.2->pipenv)
+10:59:27 PM:   Downloading filelock-3.16.1-py3-none-any.whl.metadata (2.9 kB)
+10:59:28 PM: Collecting platformdirs<5,>=3.9.1 (from virtualenv>=20.24.2->pipenv)
+10:59:28 PM:   Downloading platformdirs-4.3.6-py3-none-any.whl.metadata (11 kB)
+10:59:28 PM: Downloading pipenv-2024.4.0-py3-none-any.whl (3.0 MB)
+10:59:28 PM:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 43.7 MB/s eta 0:00:00
+10:59:28 PM: Downloading packaging-24.2-py3-none-any.whl (65 kB)
+10:59:28 PM:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 6.0 MB/s eta 0:00:00
+10:59:28 PM: Downloading virtualenv-20.28.0-py3-none-any.whl (4.3 MB)
+10:59:28 PM:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 178.0 MB/s eta 0:00:00
+10:59:28 PM: Downloading certifi-2024.8.30-py3-none-any.whl (167 kB)
+10:59:28 PM:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 167.3/167.3 kB 15.2 MB/s eta 0:00:00
+10:59:28 PM: Downloading distlib-0.3.9-py2.py3-none-any.whl (468 kB)
+10:59:28 PM:    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 469.0/469.0 kB 45.2 MB/s eta 0:00:00
+10:59:28 PM: Downloading filelock-3.16.1-py3-none-any.whl (16 kB)
+10:59:28 PM: Downloading platformdirs-4.3.6-py3-none-any.whl (18 kB)
+10:59:28 PM: Installing collected packages: distlib, platformdirs, packaging, filelock, certifi, virtualenv, pipenv
+10:59:29 PM: Successfully installed certifi-2024.8.30 distlib-0.3.9 filelock-3.16.1 packaging-24.2 pipenv-2024.4.0 platformdirs-4.3.6 virtualenv-20.28.0
+10:59:29 PM: [notice] A new release of pip is available: 24.1.2 -> 24.3.1
+10:59:29 PM: [notice] To update, run: pip install --upgrade pip
+10:59:29 PM: Attempting Ruby version 2.7.2, read from environment
+10:59:30 PM: Using Ruby version 2.7.2
+10:59:31 PM: Started restoring cached go cache
+10:59:31 PM: Finished restoring cached go cache
+10:59:32 PM: go version go1.19.13 linux/amd64
+10:59:33 PM: Using PHP version 8.0
+10:59:35 PM: v18.20.5 is already installed.
+10:59:35 PM: Now using node v18.20.5 (npm v10.8.2)
+10:59:35 PM: Enabling Node.js Corepack
+10:59:35 PM: Started restoring cached build plugins
+10:59:35 PM: Finished restoring cached build plugins
+10:59:35 PM: Started restoring cached corepack dependencies
+10:59:35 PM: Finished restoring cached corepack dependencies
+10:59:35 PM: No npm workspaces detected
+10:59:35 PM: Started restoring cached node modules
+10:59:35 PM: Finished restoring cached node modules
+10:59:35 PM: Installing npm packages using npm version 10.8.2
+10:59:38 PM: npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+10:59:38 PM: npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+10:59:41 PM: added 492 packages, and audited 493 packages in 5s
+10:59:41 PM: 62 packages are looking for funding
+10:59:41 PM:   run `npm fund` for details
+10:59:41 PM: found 0 vulnerabilities
+10:59:41 PM: npm packages installed
+10:59:41 PM: Successfully installed dependencies
+10:59:41 PM: Starting build script
+10:59:43 PM: Detected 1 framework(s)
+10:59:43 PM: "vite" at version "5.4.10"
+10:59:43 PM: Section completed: initializing
+10:59:50 PM: Starting post processing
+10:59:50 PM: Post processing - Forms
+10:59:50 PM: Post processing - header rules
+10:59:50 PM: Post processing - redirect rules
+10:59:50 PM: Post processing done
+10:59:50 PM: Section completed: postprocessing
+10:59:51 PM: Site is live ✨
+10:59:44 PM: ​
+10:59:44 PM: Netlify Build                                                 
+10:59:44 PM: ────────────────────────────────────────────────────────────────
+10:59:44 PM: ​
+10:59:44 PM: ❯ Version
+10:59:44 PM:   @netlify/build 29.56.1
+10:59:44 PM: ​
+10:59:44 PM: ❯ Flags
+10:59:44 PM:   accountId: 673673cc9dd4137cf563a644
+10:59:44 PM:   baseRelDir: true
+10:59:44 PM:   buildId: 674698d850f17363f4efcd5b
+10:59:44 PM:   deployId: 674698d850f17363f4efcd5d
+10:59:44 PM: ​
+10:59:44 PM: ❯ Current directory
+10:59:44 PM:   /opt/build/repo
+10:59:44 PM: ​
+10:59:44 PM: ❯ Config file
+10:59:44 PM:   No config file was defined: using default values.
+10:59:44 PM: ​
+10:59:44 PM: ❯ Context
+10:59:44 PM:   production
+10:59:44 PM: ​
+10:59:44 PM: Build command from Netlify app                                
+10:59:44 PM: ────────────────────────────────────────────────────────────────
+10:59:44 PM: ​
+10:59:44 PM: $ npm run build
+10:59:44 PM: > rest-express@1.0.0 build
+10:59:44 PM: > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+10:59:45 PM: vite v5.4.10 building for production...
+10:59:45 PM: transforming...
+10:59:48 PM: ✓ 1666 modules transformed.
+10:59:48 PM: rendering chunks...
+10:59:48 PM: computing gzip size...
+10:59:48 PM: ../dist/public/index.html                   1.67 kB │ gzip:   0.66 kB
+10:59:48 PM: ../dist/public/assets/index-CNODY9Hf.css   60.86 kB │ gzip:  10.60 kB
+10:59:48 PM: ../dist/public/assets/index-T8tQNEpp.js   334.68 kB │ gzip: 102.83 kB
+10:59:48 PM: ✓ built in 2.91s
+10:59:50 PM:   dist/index.js  4.4kb
+10:59:50 PM: ⚡ Done in 2ms
+10:59:50 PM: ​
+10:59:50 PM: (build.command completed in 6.3s)
+10:59:50 PM: ​
+10:59:50 PM: Deploy site                                                   
+10:59:50 PM: ────────────────────────────────────────────────────────────────
+10:59:50 PM: ​
+10:59:50 PM: Starting to deploy site from 'dist'
+10:59:50 PM: Calculating files to upload
+10:59:50 PM: 0 new file(s) to upload
+10:59:50 PM: 0 new function(s) to upload
+10:59:50 PM: Section completed: deploying
+10:59:50 PM: Site deploy was successfully initiated
+10:59:50 PM: ​
+10:59:50 PM: (Deploy site completed in 144ms)
+10:59:50 PM: ​
+10:59:50 PM: Netlify Build Complete                                        
+10:59:50 PM: ────────────────────────────────────────────────────────────────
+10:59:50 PM: ​
+10:59:50 PM: (Netlify Build completed in 6.6s)
+10:59:51 PM: Caching artifacts
+10:59:51 PM: Started saving node modules
+10:59:51 PM: Finished saving node modules
+10:59:51 PM: Started saving build plugins
+10:59:51 PM: Finished saving build plugins
+10:59:51 PM: Started saving mise cache
+10:59:57 PM: Finished saving mise cache
+10:59:57 PM: Started saving corepack cache
+10:59:57 PM: Finished saving corepack cache
+10:59:57 PM: Started saving pip cache
+10:59:57 PM: Finished saving pip cache
+10:59:57 PM: Started saving emacs cask dependencies
+10:59:57 PM: Finished saving emacs cask dependencies
+10:59:57 PM: Started saving maven dependencies
+10:59:57 PM: Finished saving maven dependencies
+10:59:57 PM: Started saving boot dependencies
+10:59:57 PM: Finished saving boot dependencies
+10:59:57 PM: Started saving rust rustup cache
+10:59:57 PM: Finished saving rust rustup cache
+10:59:57 PM: Started saving go dependencies
+10:59:57 PM: Finished saving go dependencies
