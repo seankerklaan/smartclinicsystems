@@ -10,6 +10,7 @@ import {
 import { Phone } from "lucide-react";
 
 export default function Navbar() {
+  console.log('Rendering Navbar component');
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
@@ -20,19 +21,16 @@ export default function Navbar() {
           </div>
         </Link>
 
-        <nav>
-            <ul className="flex space-x-6">
-              <li>
-                <a href="#services" className="hover:text-primary">Services</a>
-              </li>
-              <li>
-                <a href="https://blog.smartclinicsystems.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Blog</a>
-              </li>
-              <li>
-                <a href="#contact" className="hover:text-primary">Contact</a>
-              </li>
-            </ul>
-          </nav>
+        <nav className="hidden md:block">
+          <ul className="flex space-x-6 items-center">
+            <li>
+              <a href="#services" className="hover:text-primary">Services</a>
+            </li>
+            <li>
+              <a href="#contact" className="hover:text-primary">Contact</a>
+            </li>
+          </ul>
+        </nav>
 
         <div className="flex items-center space-x-4">
           <a href="tel:613-800-6876" className="hidden md:flex items-center space-x-2">
