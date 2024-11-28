@@ -42,10 +42,7 @@ export default function Footer() {
                 <Phone className="h-4 w-4" />
                 <span>613-800-6876</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4" />
-                <span>seankerklaan@gmail.com</span>
-              </div>
+              
               <div className="flex items-start space-x-2">
                 <div className="h-4 w-4 mt-1">📍</div>
                 <span>1132 Tighe Street, Manotick ON K4M 1A5</span>
