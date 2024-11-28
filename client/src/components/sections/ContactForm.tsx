@@ -33,7 +33,10 @@ export default function ContactForm() {
     },
   });
 
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
+
   async function onSubmit(values: z.infer<typeof formSchema>) {
+    setIsSubmitting(true);
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -48,14 +51,17 @@ export default function ContactForm() {
         });
         form.reset();
       } else {
-        throw new Error("Failed to send message");
+        throw new Error(await response.text() || "Failed to send message");
       }
     } catch (error) {
+      console.error("Contact form submission error:", error);
       toast({
         title: "Error",
         description: "Failed to send message. Please try again.",
         variant: "destructive",
       });
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -135,8 +141,12 @@ export default function ContactForm() {
                 )}
               />
 
-              <Button type="submit" className="w-full">
-                Send Message
+              <Button 
+                type="submit" 
+                className="w-full" 
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
           </Form>

@@ -39,12 +39,16 @@ export function registerRoutes(app: Express) {
       // Store in database
       await db.insert(contacts).values(data);
       
-      // Send email notification with HTML formatting
-      try {
-        await transporter.sendMail({
-          from: process.env.EMAIL_USER,
-          to: "seankerklaan@gmail.com", // Admin email
-          subject: "New Contact Form Submission - Smart Clinic Systems",
+      // Send email notification with HTML formatting and retry logic
+      const maxRetries = 3;
+      let retryCount = 0;
+      
+      while (retryCount < maxRetries) {
+        try {
+          await transporter.sendMail({
+            from: process.env.EMAIL_USER,
+            to: process.env.EMAIL_USER, // Use same email for sending and receiving
+            subject: "New Contact Form Submission - Smart Clinic Systems",
           html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
               <h2 style="color: #4CAF50;">New Contact Form Submission</h2>
@@ -69,10 +73,20 @@ Message: ${data.message}
 Received on ${new Date().toLocaleString()}
           `,
         });
-      } catch (emailError) {
-        console.error("Failed to send email notification:", emailError);
-        // Still return success to user if DB save worked
-        // but log the email error for monitoring
+      break; // Exit retry loop on success
+        } catch (emailError) {
+          console.error(`Failed to send email (attempt ${retryCount + 1}/${maxRetries}):`, emailError);
+          retryCount++;
+          
+          if (retryCount === maxRetries) {
+            console.error("Max retry attempts reached for email sending");
+            // Still return success to user if DB save worked
+            // but log the email error for monitoring
+          } else {
+            // Wait before retrying (exponential backoff)
+            await new Promise(resolve => setTimeout(resolve, Math.pow(2, retryCount) * 1000));
+          }
+        }
       }
       
       res.json({ success: true });
