@@ -2,8 +2,10 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Facebook, Twitter, Linkedin, Mail, Phone } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Footer() {
+  const { toast } = useToast();
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="container mx-auto px-4 py-12">
@@ -53,14 +55,44 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-4">Newsletter</h3>
             <p className="mb-4">Subscribe for actionable tips to enhance your clinic operations.</p>
-            <div className="flex space-x-2">
+            <form onSubmit={async (e) => {
+              e.preventDefault();
+              const form = e.target as HTMLFormElement;
+              const email = (form.elements.namedItem('email') as HTMLInputElement).value;
+              
+              try {
+                const response = await fetch('/api/newsletter', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ email }),
+                });
+                
+                if (response.ok) {
+                  toast({
+                    title: "Success!",
+                    description: "You've been subscribed to our newsletter.",
+                  });
+                  form.reset();
+                } else {
+                  throw new Error('Failed to subscribe');
+                }
+              } catch (error) {
+                toast({
+                  title: "Error",
+                  description: "Failed to subscribe. Please try again.",
+                  variant: "destructive",
+                });
+              }
+            }} className="flex space-x-2">
               <Input
                 type="email"
+                name="email"
                 placeholder="Your email"
                 className="bg-gray-800 border-gray-700"
+                required
               />
-              <Button variant="secondary">Subscribe</Button>
-            </div>
+              <Button type="submit" variant="secondary">Subscribe</Button>
+            </form>
           </div>
         </div>
 
